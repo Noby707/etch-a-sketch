@@ -7,10 +7,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: antiquewhite;
 }
 
 .container {
     background-color: aquamarine;
+    border: 1px solid black;
     /* Fine Testing multiples of 16*/
     /*  16	32	48	64	80	96	112	128	144	160
         176	192	208	224	240	256	272	288	304	320
@@ -18,18 +21,18 @@ body {
         496	512	528	544	560	576	592	608	624	640 */
     /* Screen height max 600px */
     /* Choosing square container dimension of 592 */
-    width: 592px;
-    height: 592px;
+    width: 608px;
+    height: 608px;
     /* padding: 0.1px; */
 
     display: flex;
-
+    justify-content: space-around;
     flex-wrap: wrap;
-    /* gap: 0.5px; */
+    /* gap: 1px; */
 }
 
 .grid-element {
-    /* background-color: white; */
+    background-color: white;
     /* Square side size = 592 / 16 = 37 */
     width: 37px;
     height: 37px;
