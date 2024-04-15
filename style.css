@@ -1,0 +1,11 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 200px;
+}
+.container {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+}
