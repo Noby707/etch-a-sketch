@@ -11,18 +11,27 @@ body {
 
 .container {
     background-color: aquamarine;
-    /* Fine Testing mods of 64 +- 16 for gap*/
+    /* Fine Testing multiples of 16*/
+    /*  16	32	48	64	80	96	112	128	144	160
+        176	192	208	224	240	256	272	288	304	320
+        336	352	368	384	400	416	432	448	464	480
+        496	512	528	544	560	576	592	608	624	640 */
+    /* Screen height max 600px */
+    /* Choosing square container dimension of 592 */
     width: 592px;
     height: 592px;
+    /* padding: 0.1px; */
 
     display: flex;
 
     flex-wrap: wrap;
-    gap: 1px;
+    /* gap: 0.5px; */
 }
 
 .grid-element {
-    background-color: white;
-    width: 36px;
-    height: 36px;
+    /* background-color: white; */
+    /* Square side size = 592 / 16 = 37 */
+    width: 37px;
+    height: 37px;
+    /* padding: 0.01px; */
 }
