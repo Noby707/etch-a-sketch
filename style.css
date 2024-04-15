@@ -1,11 +1,39 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding: 200px;
+    align-items: center;
 }
+
 .container {
     background-color: aquamarine;
-    width: 100px;
-    height: 100px;
+    /* Fine Testing mods of 64 +- 16 for gap*/
+    width: 592px;
+    height: 592px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 1px;
 }
+
+.grid-element {
+    background-color: white;
+    width: 36px;
+    height: 36px;
+}
+
+
+/* 
+
+16*16 grid
+each square is 20px
+
+
+
+
+ */
