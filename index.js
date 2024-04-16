@@ -17,10 +17,9 @@ let createGridElement = function(n) {
 
     gridElement.style.width = `${SQUARE_SIDE_LENGTH}px`;
     gridElement.style.height = `${SQUARE_SIDE_LENGTH}px`;
-    // gridElement.addEventListener('mouseenter', (e) => {
-    //     e.currentTarget.style.backgroundColor = "green";
-    // });
+    // Add Event Listener
     gridElement.addEventListener('mouseenter', mouseEvent);
+    
     // Add borders
     gridElement.style.border = "1px solid black";
 
@@ -50,5 +49,5 @@ container.style.height = `${SquaresTotalLength}px`;
 
 
 function mouseEvent(e) {
-    e.currentTarget.style.backgroundColor = "green";
+    e.currentTarget.style.backgroundColor = "yellow";
 }
