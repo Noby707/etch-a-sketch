@@ -17,7 +17,10 @@ let createGridElement = function(n) {
 
     gridElement.style.width = `${SQUARE_SIDE_LENGTH}px`;
     gridElement.style.height = `${SQUARE_SIDE_LENGTH}px`;
-
+    // gridElement.addEventListener('mouseenter', (e) => {
+    //     e.currentTarget.style.backgroundColor = "green";
+    // });
+    gridElement.addEventListener('mouseenter', mouseEvent);
     // Add borders
     gridElement.style.border = "1px solid black";
 
@@ -44,3 +47,8 @@ let SquaresTotalLength = SCREEN_HEIGHT - (SCREEN_HEIGHT % n);
 
 container.style.width = `${SquaresTotalLength}px`;
 container.style.height = `${SquaresTotalLength}px`;
+
+
+function mouseEvent(e) {
+    e.currentTarget.style.backgroundColor = "green";
+}
