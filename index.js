@@ -1,5 +1,3 @@
-// 2. Create a webpage with a 16x16 grid of square divs.
-
 // Get container element
 const container = document.getElementById("container");
 const SCREEN_HEIGHT = 600;
@@ -14,15 +12,13 @@ let squareSideLength = 0;
 let createGridElement = function(n) {
     // Create gridElement
     let gridElement = document.createElement("div");
-    gridElement.classList.add("grid-element");
+    gridElement.classList.add("grid-element"); // Adds 2px border length to both width and height 
 
     // Set width and height of elements
     const SQUARE_SIDE_LENGTH = Math.floor(SCREEN_HEIGHT / n) - 2; // Subtract 2px for borders
-    console.log(SQUARE_SIDE_LENGTH + "  " + SCREEN_HEIGHT + " " + n);
+    
     gridElement.style.width = `${SQUARE_SIDE_LENGTH}px`;
     gridElement.style.height = `${SQUARE_SIDE_LENGTH}px`;
-    console.log(gridElement.style.width + " " + gridElement.style.height);
-
 
     // Add Event Listener
     gridElement.addEventListener('mouseenter', mouseEvent);
@@ -78,7 +74,6 @@ function gridCleanUp() {
 function promptIt() {
     let gridDimension = prompt("Enter Dimension of Grid.");
     if (!isNaN(gridDimension)) {
-        console.log("Grid Clean Up: " + gridDimension);
         createGrid(gridDimension);
     } else {
         console.log("Enter a valid number!");
