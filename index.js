@@ -74,8 +74,15 @@ function gridCleanUp() {
 function promptIt() {
     let gridDimension = prompt("Enter Dimension of Grid.");
     if (!isNaN(gridDimension)) {
-        createGrid(gridDimension);
+        // Limit grid to 100
+        if (gridDimension <= 100 && gridDimension > 0) {
+            createGrid(gridDimension);
+        } else {
+            alert("Enter a valid number between 1 and 100!");
+        }
+
     } else {
-        console.log("Enter a valid number!");
+        // console.log("Enter a valid number!");
+        alert("Enter a valid number between 1 and 100!");
     }
 }
