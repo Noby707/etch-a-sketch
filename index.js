@@ -20,11 +20,17 @@ let createGridElement = function(n) {
     gridElement.style.width = `${SQUARE_SIDE_LENGTH}px`;
     gridElement.style.height = `${SQUARE_SIDE_LENGTH}px`;
 
+    // Add opacity with js
+    gridElement.style.opacity = 1;
+    // console.log(gridElement.style.opacity + " opacity");
+
     // Add Event Listener
     gridElement.addEventListener('mouseenter', mouseEvent);
     
     // Add borders
     gridElement.style.border = "1px solid black";
+
+    
 
     // Append it into the container
     container.appendChild(gridElement);
@@ -56,6 +62,16 @@ createGrid(n);
 function mouseEvent(e) {
     let rgbColor = RGBRandomizer();
     e.currentTarget.style.backgroundColor = rgbColor;
+
+    // Add darkening opacity, increase opacity by 10% for event target
+    let currOpacity = e.currentTarget.style.opacity;
+    
+    if (currOpacity > 0) {
+        e.currentTarget.style.opacity -= 0.1;
+    }
+
+    // let str = JSON.stringify(e.currentTarget.style)
+    console.log("  value " + currOpacity);
 }
 
 function RGBRandomizer() {
@@ -64,7 +80,7 @@ function RGBRandomizer() {
     let green = Math.floor(Math.random() * 255);
     let blue = Math.floor(Math.random() * 255);
 
-    rgbColor = `rgb(${red}, ${green}, ${blue})`;
+    rgbColor = `rgb(${red} ${green} ${blue}`;
 
     return rgbColor;
 }
