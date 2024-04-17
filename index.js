@@ -54,7 +54,19 @@ createGrid(n);
 
 
 function mouseEvent(e) {
-    e.currentTarget.style.backgroundColor = "yellow";
+    let rgbColor = RGBRandomizer();
+    e.currentTarget.style.backgroundColor = rgbColor;
+}
+
+function RGBRandomizer() {
+    let rgbColor = "";
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+
+    rgbColor = `rgb(${red}, ${green}, ${blue})`;
+
+    return rgbColor;
 }
 
 
