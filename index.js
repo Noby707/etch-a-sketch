@@ -22,7 +22,6 @@ let createGridElement = function(n) {
 
     // Add opacity with js
     gridElement.style.opacity = 1;
-    // console.log(gridElement.style.opacity + " opacity");
 
     // Add Event Listener
     gridElement.addEventListener('mouseenter', mouseEvent);
@@ -69,9 +68,6 @@ function mouseEvent(e) {
     if (currOpacity > 0) {
         e.currentTarget.style.opacity -= 0.1;
     }
-
-    // let str = JSON.stringify(e.currentTarget.style)
-    console.log("  value " + currOpacity);
 }
 
 function RGBRandomizer() {
@@ -110,7 +106,6 @@ function promptIt() {
         }
 
     } else {
-        // console.log("Enter a valid number!");
         alert("Enter a valid number between 1 and 100!");
     }
 }
